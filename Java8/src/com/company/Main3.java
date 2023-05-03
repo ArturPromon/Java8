@@ -11,6 +11,5 @@ public class Main3 {
         num2 = scn.nextFloat();
         result = num1 + num2;
         System.out.println("Sum of two numbers is " + result);
-
     }
 }

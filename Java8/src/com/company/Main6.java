@@ -9,27 +9,35 @@ public class Main6 {
         char sym;
         System.out.println("Please enter first number: ");
         num1 = scn.nextInt();
-        System.out.println("Please enter second number: ");
-        num2 = scn.nextInt();
         System.out.println("Please enter an operation(+,-,*,/): ");
         sym = scn.next().charAt(0);
-        switch (sym) {
-            case '+':
-                result = num1 + num2;
-                System.out.println(result);
+        while(true){
+            if(sym != '+' && sym != '-' && sym != '*' && sym != '/'){
+                System.out.println("Incorrect operation! Please try again(+, -, *, /): ");
+                sym = scn.next().charAt(0);
+            }else{
+                System.out.println("Please enter second number: ");
+                num2 = scn.nextInt();
+                switch (sym) {
+                    case '+':
+                        result = num1 + num2;
+                        System.out.println(result);
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        System.out.println(result);
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        System.out.println(result);
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        System.out.println(result);
+                        break;
+                }
                 break;
-            case '-':
-                result = num1 - num2;
-                System.out.println(result);
-                break;
-            case '*':
-                result = num1 * num2;
-                System.out.println(result);
-                break;
-            case '/':
-                result = num1 / num2;
-                System.out.println(result);
-                break;
+            }
         }
     }
 }

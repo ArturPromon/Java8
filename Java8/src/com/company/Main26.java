@@ -20,7 +20,7 @@ public class Main26 {
         int index = 1;
         array2[0] = array[0];
         max = array[0];
-        for(int i = 0; i<array.length;i++){
+        for(int i = 0; i<array.length; i++){
             if(max<array[i]){
                 max = array[i];
                 array2[index] = array[i];
